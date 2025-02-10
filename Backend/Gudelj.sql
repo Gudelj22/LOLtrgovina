@@ -18,7 +18,7 @@ create table robe(
 sifra int not null primary key identity (1,1),
 ime varchar(50) not null,
 vrsta varchar(50) not null,
-cijena decimal(10,2),
+cijena decimal(10,2) not null,
 kolicina int not null,
 kupac int not null references kupci(sifra)
 
@@ -27,7 +27,7 @@ kupac int not null references kupci(sifra)
 create table narudzbe(
 sifra int not null primary key identity (1,1),
 kolicina int  null,
-cijena decimal(10,2) null ,
+cijena decimal(10,2) not null ,
 roba int not null references robe(sifra),
 kupac int not null references kupci(sifra)
 );
@@ -39,6 +39,10 @@ brojnarudzbe int  null
 );
 
 insert into kupci(ime, prezime, datum_rodenja) values
-('petar','gudelj','13.8.2005.');
+('petar','gudelj','13-8-2005');
 
-insert into robe()
+insert into robe(ime, vrsta, cijena, kolicina, kupac) values
+('jhin','na daljinu','1500','1',1);
+
+insert into narudzbe() values
+();
