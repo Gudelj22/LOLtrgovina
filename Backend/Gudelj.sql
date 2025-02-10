@@ -38,4 +38,5 @@ narudzba int not null references  narudzbe(sifra),
 brojnarudzbe int  null
 );
 
+insert into kupci(ime, prezime, datum_rodenja) values
 
