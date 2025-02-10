@@ -39,4 +39,6 @@ brojnarudzbe int  null
 );
 
 insert into kupci(ime, prezime, datum_rodenja) values
+('petar','gudelj','13.8.2005.');
 
+insert into robe()
