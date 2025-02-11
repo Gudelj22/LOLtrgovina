@@ -35,7 +35,7 @@ kupac int not null references kupci(sifra)
 create table stavke(
 sifra int not null primary key identity (1,1),
 narudzba int not null references  narudzbe(sifra),
-brojnarudzbe int  null
+brojnarudzbe int not null
 );
 
 insert into kupci(ime, prezime, datum_rodenja) values
@@ -44,5 +44,8 @@ insert into kupci(ime, prezime, datum_rodenja) values
 insert into robe(ime, vrsta, cijena, kolicina, kupac) values
 ('jhin','na daljinu','1500','1',1);
 
-insert into narudzbe() values
-();
+insert into narudzbe(cijena, roba, kupac) values
+('1500',1,1);
+
+insert into stavke(narudzba, brojnarudzbe) values
+(1,'1');
