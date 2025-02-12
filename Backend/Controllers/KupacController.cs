@@ -6,7 +6,7 @@ namespace Backend.Controllers
     [Route("api/v1/[controller]")] // Ruta ce se zvati /api/v1/HttpMetode
     public class KupacController : ControllerBase
     {
-
+        
 
 
     }
