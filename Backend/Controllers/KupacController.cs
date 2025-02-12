@@ -32,6 +32,39 @@ namespace Backend.Controllers
                 return BadRequest(e);
             }
         }
+        
 
+        [HttpPost]
+        public IActionResult Post(kupac kupac)
+        {
+            kupac.Ime = "Hello " + kupac.Ime;
+            return StatusCode(StatusCodes.Status201Created, kupac); 
+        }
+
+
+       
+        [HttpPut]
+        public IActionResult Put(Osoba osoba)
+        {
+            osoba.Ime = "Promjenio " + osoba.Ime;
+            return Ok(osoba);
+        }
+
+
+       
+
+        [HttpDelete]
+        public IActionResult Delete(int sifra)
+        {
+            if (sifra <= 0)
+            {
+                return BadRequest(new { poruka = "Sifra mora biti veca od 0" });
+            }
+            else
+            {
+                return Ok(new { poruka = "Obrisano" });
+
+            }
+        }
     }
 }
