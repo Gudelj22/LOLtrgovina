@@ -38,7 +38,10 @@ namespace Backend.Controllers
         public IActionResult Post(kupac kupac)
         {
             kupac.Ime = "Hello " + kupac.Ime;
-            return StatusCode(StatusCodes.Status201Created, kupac); 
+            return StatusCode(StatusCodes.Status201Created, kupac);
+            kupac.Prezime = "Hello " + kupac.Prezime;
+            return StatusCode(StatusCodes.Status201Created, kupac);
+        }
         }
 
 
