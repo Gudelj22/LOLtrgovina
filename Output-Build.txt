@@ -1,0 +1,6 @@
+﻿Build started at 12:26 PM...
+1>------ Build started: Project: Backend, Configuration: Debug Any CPU ------
+1>C:\Program Files\dotnet\sdk\8.0.400\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.Sdk.ImportWorkloads.targets(16,3): error MSB4019: The imported project "C:\Program Files\dotnet\sdk-manifests\8.0.100\microsoft.net.workload.mono.toolchain.current\8.0.12\WorkloadManifest.targets" was not found. Confirm that the expression in the Import declaration "C:\Program Files\dotnet\sdk-manifests\8.0.100\microsoft.net.workload.mono.toolchain.current\8.0.12\WorkloadManifest.targets" is correct, and that the file exists on disk.
+1>Done building project "Backend.csproj" -- FAILED.
+========== Build: 0 succeeded, 1 failed, 0 up-to-date, 0 skipped ==========
+========== Build completed at 12:26 PM and took 00.246 seconds ==========

@@ -10,7 +10,7 @@ create table kupci(
 sifra int not null primary key identity (1,1),
 ime varchar(50) not null,
 prezime varchar(50) not null,
-datum_rodenja date not null,
+godine int not null,
 oib char(11) null
 );
 
@@ -38,8 +38,8 @@ narudzba int not null references  narudzbe(sifra),
 brojnarudzbe int not null
 );
 
-insert into kupci(ime, prezime, datum_rodenja) values
-('petar','gudelj','13-8-2005');
+insert into kupci(ime, prezime, godine) values
+('petar','gudelj','19');
 
 insert into robe(ime, vrsta, cijena, kolicina, kupac) values
 ('jhin','na daljinu','1500','1',1);
