@@ -29,36 +29,26 @@ namespace WebAPI9.Controllers
         [Route("json")]
         public IActionResult GetJson(string ime, string prezime, int godina, )
         {
-            return Ok(new { Ime = ime, Prezime = prezime, godina = godina });
-        }
+            return Ok(new { Ime = ime, Prezime = prezime, Godina = godina });
+            try
+            {
+                if (godina < 18)
+                {
+                    return BadRequest(new { poruka = "nisi punoljetan" });
+
+                }
+                else
+                {
+                    return Ok(new { poruka = "punoljetan si" });
+                }
+            }
+            catch 
+            {
+                Console.WriteLine("uspiješno si  unjeo/la podatke");
 
 
-       
-
-
-
-
-
-       
-
-        [HttpPost]
-        public IActionResult Post(Osoba osoba)
-        {
-            osoba.Ime = "Hello " + osoba.Ime;
-            return StatusCode(StatusCodes.Status201Created, osoba); // StatusCode(201, osoba);
-        }
-
-
-        
-
-
-   
-
-        [HttpPut]
-        public IActionResult Put(Osoba osoba)
-        {
-            osoba.Ime = "Promjenio " + osoba.Ime;
-            return Ok(osoba);
+            }
+           
         }
 
 
@@ -83,7 +73,33 @@ namespace WebAPI9.Controllers
         }
         
 
+        [HttpPost]
+        public IActionResult Post(int heroja, decimal cijena, int kolicina, int kupac = sifra)
+        {
+            Post { heroja = jhin};
+            Post { cijena = 1500}; 
+            Post { kolicina = 1 }; 
+            Post { kupac = 1 };
 
+        }
 
+        [HttpGet]
+        public IActionResult GetActionResult(int kupac,string roba)
+        {
+            GetActionResult(narudzba);
+
+            for ( kupac  || roba  ) ;
+
+            try
+            {
+                foreach (kupac=sifra++ roba=sifra) ; 
+            }
+            catch 
+            {
+                Post.sifra;
+               
+            }
+
+        }
     }
 }

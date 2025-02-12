@@ -17,7 +17,7 @@ oib char(11) null
 create table robe(
 sifra int not null primary key identity (1,1),
 ime varchar(50) not null,
-vrsta varchar(50) not null,
+vrsta varchar(50)  null,
 cijena decimal(10,2) not null,
 kolicina int not null,
 kupac int not null references kupci(sifra)
@@ -41,8 +41,8 @@ brojnarudzbe int not null
 insert into kupci(ime, prezime, godine) values
 ('petar','gudelj','19');
 
-insert into robe(ime, vrsta, cijena, kolicina, kupac) values
-('jhin','na daljinu','1500','1',1);
+insert into robe(ime, cijena, kolicina, kupac) values
+('jhin','1500','1',1);
 
 insert into narudzbe(cijena, roba, kupac) values
 ('1500',1,1);
