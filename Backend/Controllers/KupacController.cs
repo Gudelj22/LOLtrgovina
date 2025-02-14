@@ -1,4 +1,5 @@
 ﻿using Backend.Data;
+using Backend.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Backend.Controllers
@@ -35,12 +36,13 @@ namespace Backend.Controllers
         
 
         [HttpPost]
-        public IActionResult Post(kupac kupac)
+        public IActionResult Post(Kupac kupac)
         {
-            kupac.Ime = kupac.Ime;
+            _context.Kupci.Add(kupac);
+            _context.SaveChanges();
             return StatusCode(StatusCodes.Status201Created, kupac);
            
-        }
+        
         }
 
 
@@ -48,8 +50,18 @@ namespace Backend.Controllers
         [HttpPut]
         public IActionResult Put(Kupac kupac)
         {
-            kupac.Ime =  kupac.Ime;
-            return Ok(kupac);
+            var kupacIzBaze = _context.Kupci.Find(kupac.Sifra);
+            if(kupacIzBaze == null)
+            {
+                return NotFound(new { poruka = "Kupac nije pronadjen" });
+            }
+            kupacIzBaze.Ime =  kupac.Ime;
+            kupacIzBaze.Prezime = kupac.Prezime;
+            kupacIzBaze.Godine = kupac.Godine;
+            kupacIzBaze.Oib = kupac.Oib;
+            _context.SaveChanges();
+
+            return Ok(kupacIzBaze);
         }
 
 
@@ -64,6 +76,13 @@ namespace Backend.Controllers
             }
             else
             {
+                var kupacIzBaze = _context.Kupci.Find(sifra);
+                if (kupacIzBaze == null)
+                {
+                    return NotFound(new { poruka = "Kupac nije pronadjen" });
+                }
+               _context.Kupci.Remove(kupacIzBaze);
+                _context.SaveChanges();
                 return Ok(new { poruka = "Obrisano" });
 
             }
