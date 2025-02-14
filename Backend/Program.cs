@@ -35,4 +35,8 @@ app.UseSwaggerUI(p =>
 
 app.MapControllers();
 
+app.UseStaticFiles();
+app.UseDefaultFiles();
+app.MapFallbackToFile();
+
 app.Run();
