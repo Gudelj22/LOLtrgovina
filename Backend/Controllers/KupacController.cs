@@ -37,20 +37,19 @@ namespace Backend.Controllers
         [HttpPost]
         public IActionResult Post(kupac kupac)
         {
-            kupac.Ime = "Hello " + kupac.Ime;
+            kupac.Ime = kupac.Ime;
             return StatusCode(StatusCodes.Status201Created, kupac);
-            kupac.Prezime = "Hello " + kupac.Prezime;
-            return StatusCode(StatusCodes.Status201Created, kupac);
+           
         }
         }
 
 
        
         [HttpPut]
-        public IActionResult Put(Osoba osoba)
+        public IActionResult Put(Kupac kupac)
         {
-            osoba.Ime = "Promjenio " + osoba.Ime;
-            return Ok(osoba);
+            kupac.Ime =  kupac.Ime;
+            return Ok(kupac);
         }
 
 
