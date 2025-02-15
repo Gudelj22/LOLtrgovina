@@ -32,7 +32,7 @@ namespace Backend.Controllers
             {
                 return BadRequest(e);
             }
-        s
+        }
         
 
         [HttpPost]
