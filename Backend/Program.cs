@@ -16,6 +16,16 @@ builder.Services.AddDbContext<BackendContext>(o => {
     o.UseSqlServer(builder.Configuration.GetConnectionString("LOLtrgovinaContext"));
 });
 
+
+builder.Services.AddCors(o =>
+{
+    o.AddPolicy("CorsPolicy", b =>
+    {
+        b.AllowAnyOrigin().AllowAnyHeader();
+    });
+});
+
+
 var app = builder.Build();
 
 
@@ -33,10 +43,14 @@ app.UseSwaggerUI(p =>
     p.ConfigObject.AdditionalItems.Add("requestSnippetsEnabled", true);
 });
 
+
+
 app.MapControllers();
 
 app.UseStaticFiles();
 app.UseDefaultFiles();
 app.MapFallbackToFile("index.html");
+
+app.UseCors("CorsPolicy");
 
 app.Run();
