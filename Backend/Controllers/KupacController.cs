@@ -83,6 +83,7 @@ namespace Backend.Controllers
        
 
         [HttpDelete]
+        [Route("{sifra:int}")]
         public IActionResult Delete(int sifra)
         {
             if (sifra <= 0)
