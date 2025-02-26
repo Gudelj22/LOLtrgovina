@@ -33,7 +33,21 @@ namespace Backend.Controllers
                 return BadRequest(e);
             }
         }
-        
+
+        [HttpGet]
+        [Route("{sifra:int}")]
+        public IActionResult GetBySifra(int sifra)
+        {
+            try
+            {
+                return Ok(_context.Kupci.Find(sifra));
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e);
+            }
+        }
+
 
         [HttpPost]
         public IActionResult Post(Kupac kupac)
