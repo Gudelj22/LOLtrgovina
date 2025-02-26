@@ -27,7 +27,7 @@ export default function NavBarEdunova(){
                     <NavDropdown title="Programi" id="basic-nav-dropdown">
                     <NavDropdown.Item
                     onClick={()=>navigate(RouteNames.KUPAC_PREGLED)}
-                    >Kuopci</NavDropdown.Item>
+                    >Kupci</NavDropdown.Item>
                     
                     </NavDropdown>
                     <Nav.Link href={PRODUKCIJA + '/swagger'} target='_blank'>Swagger</Nav.Link>
