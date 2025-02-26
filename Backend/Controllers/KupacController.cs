@@ -62,9 +62,10 @@ namespace Backend.Controllers
 
        
         [HttpPut]
-        public IActionResult Put(Kupac kupac)
+        [Route("{sifra:int}")]
+        public IActionResult Put(int sifra,Kupac kupac)
         {
-            var kupacIzBaze = _context.Kupci.Find(kupac.Sifra);
+            var kupacIzBaze = _context.Kupci.Find(sifra);
             if(kupacIzBaze == null)
             {
                 return NotFound(new { poruka = "Kupac nije pronadjen" });
