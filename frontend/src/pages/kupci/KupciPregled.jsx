@@ -68,7 +68,7 @@ export default function KupciPregled(){
                         <td>
                             {kupac.prezime}
                         </td>
-                        <td>
+                        <td className="desno">
                             {kupac.godine}
                         </td>
                         <td>
