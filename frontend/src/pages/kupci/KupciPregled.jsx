@@ -62,14 +62,23 @@ export default function KupciPregled(){
             <tbody>
                 {kupci && kupci.map((kupac,index)=>(
                     <tr key={index}>
-                        <td>
+                        <td >
                             {kupac.ime}
                         </td>
                         <td>
                             {kupac.prezime}
                         </td>
                         <td className="desno">
-                            {kupac.godine}
+
+
+                            godine: &nbsp;
+                            <span style={{fontWeight:'bold'}}>
+                                {kupac.godine}
+                            </span>
+                          
+
+
+
                         </td>
                         <td>
                             {kupac.oib}
