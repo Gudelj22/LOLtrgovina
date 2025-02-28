@@ -26,7 +26,7 @@ function App() {
         </Routes>
 
         <hr />
-        &copy; LOL trgovina
+        &copy; LOL trgovinann
       </Container>
      
     </>

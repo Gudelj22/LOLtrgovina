@@ -1,9 +1,10 @@
-
+import slika from '../assets/LoL.jpg'
 
 export default function Pocetna(){
     return(
         <>
-        Dobrodošli na moju aplikaciju
+        Dobro došli na moju aplikaciju 
+        <img src={slika} alt="LOL" className='slika'/>
         </>
     )
 }
