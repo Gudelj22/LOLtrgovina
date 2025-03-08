@@ -18,14 +18,14 @@ function App() {
     <>
       <Container>
         <NavBarEdunova />
-        
-        <Routes>
-          <Route path={RouteNames.HOME} element={<Pocetna />} />
-          <Route path={RouteNames.KUPAC_PREGLED} element={<KupciPregled />} />
-          <Route path={RouteNames.KUPAC_NOVI} element={<KupciDodaj />} />
-          <Route path={RouteNames.KUPAC_PROMJENA} element={<KupciPromjena />} />
-        </Routes>
-
+        <div className='pocetna'>
+          <Routes>
+            <Route path={RouteNames.HOME} element={<Pocetna />} />
+            <Route path={RouteNames.KUPAC_PREGLED} element={<KupciPregled />} />
+            <Route path={RouteNames.KUPAC_NOVI} element={<KupciDodaj />} />
+            <Route path={RouteNames.KUPAC_PROMJENA} element={<KupciPromjena />} />
+          </Routes>
+        </div>
         <hr />
         
         &copy; LOL trgovina

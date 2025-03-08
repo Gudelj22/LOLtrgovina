@@ -3,6 +3,9 @@ import slika from '../assets/LoL.jpg'
 
 // https://getbootstrap.com/docs/4.0/utilities/display/
 
+// čitaj
+// https://www.npmjs.com/package/react-sticky-footer
+
 
 
 export default function Pocetna(){

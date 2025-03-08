@@ -13,3 +13,8 @@
 .siroko{
     width: 100%;
 }
+.pocetna{
+    min-height: 800px;
+    max-height: 900px;
+    overflow: auto;
+}
