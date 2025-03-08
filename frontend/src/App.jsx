@@ -11,6 +11,7 @@ import KupciPromjena from './pages/kupci/KupciPromjena'
 
 
 
+
 function App() {
 
   return (
@@ -26,7 +27,8 @@ function App() {
         </Routes>
 
         <hr />
-        &copy; LOL trgovinann
+        
+        &copy; LOL trgovina
       </Container>
      
     </>
