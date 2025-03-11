@@ -11,6 +11,10 @@ import slika from '../assets/LoL.jpg'
 export default function Pocetna(){
     return(
     <>
+   
+   
+    
+    
         <img src={slika} alt="LOL" className='d-none d-md-block d-lg-block d-xl-block w-100'/>
         <img src={slikamobile} alt="LOL" className='d-block d-md-none d-lg-none w-100'/>
     </>
