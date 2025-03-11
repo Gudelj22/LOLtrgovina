@@ -8,7 +8,7 @@ import Pocetna from './pages/Pocetna'
 import KupciPregled from './pages/kupci/KupciPregled'
 import KupciDodaj from './pages/kupci/KupciDodaj'
 import KupciPromjena from './pages/kupci/KupciPromjena'
-
+import StickyFooter from './services/indexfooter';
 
 
 
@@ -16,6 +16,22 @@ function App() {
 
   return (
     <>
+    <dev>
+    <StickyFooter
+    bottomThreshold={50}
+    normalStyles={{
+    backgroundColor: "rgb(255, 0, 242)",
+    padding: "2rem"
+    }}
+    stickyStyles={{
+    backgroundColor: "rgb(255, 0, 212)",
+    padding: "2rem"
+    }}
+    
+>
+    LOLtrgovina
+</StickyFooter>
+</dev>
       <Container>
         <NavBarEdunova />
         <div className='pocetna'>
@@ -28,11 +44,12 @@ function App() {
         </div>
         <hr />
         
-        &copy; LOL trgovina
+        &copy; LOLtrgovina
       </Container>
      
     </>
   )
+  
 }
 
 export default App
