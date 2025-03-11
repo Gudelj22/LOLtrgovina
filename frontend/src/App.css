@@ -19,3 +19,8 @@
     overflow: auto;
    
 }
+
+
+.bg-body-tertiary {
+    background-color: rgb(255, 0, 242) !important; 
+}
