@@ -30,6 +30,7 @@ export default function NavBarEdunova(){
                     >Kupci</NavDropdown.Item>
                     
                     </NavDropdown>
+                    <Nav.Link onClick={()=>navigate(RouteNames.ERA)}>ERA dijagram</Nav.Link>
                     <Nav.Link href={PRODUKCIJA + '/swagger'} target='_blank'>Swagger</Nav.Link>
                 </Nav>
                 </Navbar.Collapse>

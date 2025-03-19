@@ -9,6 +9,7 @@ import KupciPregled from './pages/kupci/KupciPregled'
 import KupciDodaj from './pages/kupci/KupciDodaj'
 import KupciPromjena from './pages/kupci/KupciPromjena'
 import StickyFooter from './services/indexfooter';
+import EraDijagram from './pages/EraDijagram'
 
 
 
@@ -40,6 +41,7 @@ function App() {
             <Route path={RouteNames.KUPAC_PREGLED} element={<KupciPregled />} />
             <Route path={RouteNames.KUPAC_NOVI} element={<KupciDodaj />} />
             <Route path={RouteNames.KUPAC_PROMJENA} element={<KupciPromjena />} />
+            <Route path={RouteNames.ERA} element={<EraDijagram />} /> 
           </Routes>
         </div>
         <hr />
